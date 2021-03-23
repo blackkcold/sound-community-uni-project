@@ -58,6 +58,7 @@ body {
 <body id="body">
 <div class="row">
     <div class="col-sm-12">
+        <form action="php/uploadmusicRecord.php">
         <div class="row">
             <div class="col-sm-6 offset-xl-2 col-xl-4">
                 <div class="container" id="title"> <img id="logo" src="png/logo.png" alt="加载失败">
@@ -76,7 +77,7 @@ body {
         <div class="row">
             <div class="col-sm-4 col-xl-3 offset-xl-2">
                 <div class="container" style="text-align: center; width: 300px; height: 300px; margin-top: 20px; border: thin solid white; border-radius: 10px; background: white">
-                    <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px">Your browser does not support Canvas tag.</canvas>
+                    <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px; box-shadow: 10px 10px 10px #E0E0E0;">Your browser does not support Canvas tag.</canvas>
                     <audio id="sound" controls> </audio>
                 </div>
             </div>
@@ -89,11 +90,11 @@ body {
                         loading="lazy"
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBQhC3j7LDPxdZe1N3cB3-AGEUF3jF2gmU
-                             &q=Eiffel+Tower,Paris+France">
+                             &q=london">
                     </iframe>
                 <div class="row">
                     <div class="col-sm-8" style="text-align: center; color: white; height: 240px;">
-                        <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px"></textarea>
+                        <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px;">text</textarea>
                     </div>
                     <div class="col-sm-4" style="text-align: center; background-color: transparent;">
                         <label for="file" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
@@ -133,7 +134,7 @@ body {
         </div>
         <div class="row">
             <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
-                <nav aria-label="Page navigation example" style="display: inline-block"> 
+                <nav aria-label="Page navigation example" style="display: inline-block;"> 
                     <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
                     <ul class="pagination" style="margin-top: 40px;">
                         <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span> </a> </li>
@@ -152,6 +153,7 @@ body {
                 <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; margin-top: 10px; color: white;">©2021 by Sound Community Project</p>
             </div>
         </div>
+        </form>
     </div>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script> 
