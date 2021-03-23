@@ -31,7 +31,6 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 #logotext {
     display: inline-block;
     color: white;
@@ -46,12 +45,44 @@ body {
     margin-top: -10px;
     margin-right: 20px;
 }
-
 #mapiframe {
     border-radius: 10px;
     margin: 15px;
     margin-top: 20px;
-        
+}
+.placeFrame {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border: thin solid white;
+    border-radius: 10px;
+}
+.exhibitionFrame {
+    width: 150px;
+    height: 110px;
+    background-color: white;
+    display: inline-block;
+    margin-top: 15px;
+    border: thick dotted grey;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #E0E0E0;
+}
+.PicHolder {
+    text-align: center;
+    color: white;
+}
+.sampleTitleFrame {
+    width: 150px;
+    height: 25px;
+    background: grey;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.sampleTitle {
+    font-size: 20px;
+    color: white;
+    font-family: monoton;
 }
 </style>
 </head>
@@ -59,29 +90,24 @@ body {
 <div class="row">
     <div class="col-sm-12">
         <form action="php/uploadmusicRecord.php">
-        <div class="row">
-            <div class="col-sm-6 offset-xl-2 col-xl-4">
-                <div class="container" id="title"> <img id="logo" src="png/logo.png" alt="加载失败">
-                    <p id="logotext">Sound Around Us</p>
+            <div class="row">
+                <div class="col-sm-6 offset-xl-2 col-xl-4">
+                    <div class="container" id="title"> <img id="logo" src="png/logo.png" alt="加载失败">
+                        <p id="logotext">Sound Around Us</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4" style="text-align: right;">
+                    <nav style="margin-top: 30px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';"> <a href="/html/" style="color: white; font-weight: bold">HOME</a> <a href="/css/" style="color: white">ABOUT</a> <a href="the collection.html" style="color: white">COLLECTION</a> <a href="/jquery/" style="color: white">CONTACT</a> </nav>
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-4" style="text-align: right;">
-                <nav style="margin-top: 30px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';">
-                    <a href="/html/" style="color: white; font-weight: bold">HOME</a>
-                    <a href="/css/" style="color: white">ABOUT</a>
-                    <a href="the collection.html" style="color: white">COLLECTION</a>
-                    <a href="/jquery/" style="color: white">CONTACT</a>
-                </nav>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-xl-3 offset-xl-2">
-                <div class="container" style="text-align: center; width: 300px; height: 300px; margin-top: 20px; border: thin solid white; border-radius: 10px; background: white">
-                    <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px; box-shadow: 10px 10px 10px #E0E0E0;">Your browser does not support Canvas tag.</canvas>
-                    <audio id="sound" controls> </audio>
+            <div class="row">
+                <div class="col-sm-4 col-xl-3 offset-xl-2">
+                    <div class="container" style="text-align: center; width: 300px; height: 300px; margin-top: 20px; border: thin solid white; border-radius: 10px; background: white">
+                        <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px; box-shadow: 10px 10px 10px #E0E0E0;">Your browser does not support Canvas tag.</canvas>
+                        <audio id="sound" controls> </audio>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-8 col-xl-5">   
+                <div class="col-sm-8 col-xl-5">
                     <iframe
                         id="mapiframe"
                         width="490"
@@ -90,69 +116,92 @@ body {
                         loading="lazy"
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBQhC3j7LDPxdZe1N3cB3-AGEUF3jF2gmU
-                             &q=london">
-                    </iframe>
-                <div class="row">
-                    <div class="col-sm-8" style="text-align: center; color: white; height: 240px;">
-                        <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px;">text</textarea>
-                    </div>
-                    <div class="col-sm-4" style="text-align: center; background-color: transparent;">
-                        <label for="file" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
-                        <p style="font-family: monoton; text-align: center; margin-top: 5px;font-size: 20px; color: #77B7C1">Upload Sound</p>
-                        </label>
-                        <input type="file" id="file" accept="audio/*" style="position: absolute; left: -9999px;">
-                        <label for="submit" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
-                        <p style="font-family: monoton; text-align: center; margin-top: 22px;font-size: 20px; color: #796E94">Submit</p>
-                        </label>
-                        <input type="submit" id="submit" style="position: absolute; left: -9999px;">
+                             &q=london"> </iframe>
+                    <div class="row">
+                        <div class="col-sm-8" style="text-align: center; color: white; height: 240px;">
+                            <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px;">text</textarea>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center; background-color: transparent;">
+                            <label for="file" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
+                            <p style="font-family: monoton; text-align: center; margin-top: 5px;font-size: 20px; color: #77B7C1">Upload Sound</p>
+                            </label>
+                            <input type="file" id="file" accept="audio/*" style="position: absolute; left: -9999px;">
+                            <label for="submit" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
+                            <p style="font-family: monoton; text-align: center; margin-top: 22px;font-size: 20px; color: #796E94">Submit</p>
+                            </label>
+                            <input type="submit" id="submit" style="position: absolute; left: -9999px;">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
-                <p style="margin-bottom: 30px; color: white;">———————————————————————————————————————————————————</p>
+            <div class="row">
+                <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
+                    <p style="margin-bottom: 30px; color: white;">———————————————————————————————————————————————————</p>
+                </div>
             </div>
-        </div>
-        <div class="row" style="color: black;">
-            <div class="col-sm-3 offset-xl-2 col-xl-2" >
-                <div style="width: 180px;height: 180px; background: white; border: thin solid white; border-radius: 10px;">
-                ①</div>
+            <div class="row" style="color: black;">
+                <div class="col-sm-3 offset-xl-2 col-xl-2" style="text-align: center;">
+                    <div class="placeFrame">
+                        <div class="exhibitionFrame">
+                            <h1 class="PicHolder">PICs</h1>
+                        </div>
+                        <div class="sampleTitleFrame">
+                            <h3 class="sampleTitle">Title</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                    <div class="placeFrame">
+                        <div class="exhibitionFrame">
+                            <h1 class="PicHolder">PICs</h1>
+                        </div>
+                        <div class="sampleTitleFrame">
+                            <h3 class="sampleTitle">Title</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                    <div class="placeFrame">
+                        <div class="exhibitionFrame">
+                            <h1 class="PicHolder">PICs</h1>
+                        </div>
+                        <div class="sampleTitleFrame">
+                            <h3 class="sampleTitle">Title</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                     <div class="placeFrame">
+                        <div class="exhibitionFrame">
+                            <h1 class="PicHolder">PICs</h1>
+                        </div>
+                        <div class="sampleTitleFrame">
+                            <h3 class="sampleTitle">Title</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-3 col-xl-2">
-                <div style="width: 180px;height: 180px; background: white; border: thin solid white; border-radius: 10px;">
-                ②</div>                
+            <div class="row">
+                <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
+                    <nav aria-label="Page navigation example" style="display: inline-block;"> 
+                        <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
+                        <ul class="pagination" style="margin-top: 40px;">
+                            <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span> </a> </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span> </a> </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="col-sm-3 col-xl-2">
-                <div style="width: 180px;height: 180px; background: white; border: thin solid white; border-radius: 10px;">
-                ③</div>                
+            <div class="row">
+                <div class="col-sm-12 col-xl-8 offset-xl-2">
+                    <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; margin-top: 10px; color: white;">©2021 by Sound Community Project</p>
+                </div>
             </div>
-            <div class="col-sm-3 col-xl-2">
-                <div style="width: 180px;height: 180px; background: white; border: thin solid white; border-radius: 10px;">
-                ④</div>                
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
-                <nav aria-label="Page navigation example" style="display: inline-block;"> 
-                    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
-                    <ul class="pagination" style="margin-top: 40px;">
-                        <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span> </a> </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span> </a> </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-xl-8 offset-xl-2">
-                <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; margin-top: 10px; color: white;">©2021 by Sound Community Project</p>
-            </div>
-        </div>
         </form>
     </div>
 </div>
