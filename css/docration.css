@@ -76,9 +76,9 @@ body {
     border: thick dotted grey;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #E0E0E0;
+    text-align: center;
 }
 .PicHolder {
-    text-align: center;
     color: white;
 }
 .sampleTitleFrame {
