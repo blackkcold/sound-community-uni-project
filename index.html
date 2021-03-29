@@ -12,26 +12,38 @@
 <body id="body">
 <div class="row">
     <div class="col-sm-12">
-        <form action="php/uploadmusicRecord.php">
-            <div class="row">
-                <div class="col-sm-6 offset-xl-2 col-xl-4">
-                    <div class="container" id="title"> <img id="logo" src="png/logo.png" alt="加载失败">
-                        <p id="logotext">Sound Around Us</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-4" style="text-align: right;">
-                    <nav style="margin-top: 30px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';"> <a href="/html/" style="color: white; font-weight: bold">HOME</a> <a href="/css/" style="color: white">ABOUT</a> <a href="the collection.html" style="color: white">COLLECTION</a> <a href="/jquery/" style="color: white">CONTACT</a> </nav>
+        <div class="row">
+            <div class="col-sm-6 offset-xl-2 col-xl-4">
+                <div class="container" id="title"> <img id="logo" src="png/logo.png" alt="加载失败">
+                    <p id="logotext">Sound Around Us</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4 col-xl-3 offset-xl-2">
-                    <div class="container" style="text-align: center; width: 300px; height: 300px; margin-top: 20px; border: thin solid white; border-radius: 10px; background: white">
-                        <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px; box-shadow: 10px 10px 10px #E0E0E0;">Your browser does not support Canvas tag.</canvas>
-                        <audio id="sound" controls> </audio>
-                    </div>
+            <div class="col-sm-6 col-xl-4" style="text-align: right;">
+                <nav style="margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"> <a class="nav-link active" href="index.html">HOME</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">ABOUT</a> </li>
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COLLECTION</a>
+                            <div class="dropdown-menu"> <a class="dropdown-item" href="CityOfStars.html">City of Stars</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Sound1</a> <a class="dropdown-item" href="#">Sound2</a> <a class="dropdown-item" href="#">Sound3</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a> </div>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">CONTACT</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-xl-3 offset-xl-2">
+                <div class="container" style="text-align: center; width: 300px; height: 300px; margin-top: 20px; border: thin solid white; border-radius: 10px; background: white">
+                    <canvas id="visualizer" width="200" height="150" style="margin-top: 25px; border: thick dotted grey; border-radius: 10px; box-shadow: 10px 10px 10px #E0E0E0;">Your browser does not support Canvas tag.</canvas>
+                    <audio id="sound" controls> </audio>
                 </div>
-                <div class="col-sm-8 col-xl-5">
-                    <iframe
+            </div>
+            <div class="col-sm-8 col-xl-5">
+                <iframe
                         id="mapiframe"
                         width="490"
                         height="80"
@@ -40,11 +52,12 @@
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBQhC3j7LDPxdZe1N3cB3-AGEUF3jF2gmU
                              &q=london"> </iframe>
-                    <div class="row">
-                        <div class="col-sm-8" style="text-align: center; color: white; height: 220px;">
-                            <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'">text</textarea>
-                        </div>
-                        <div class="col-sm-4" style="text-align: center; background-color: transparent;">
+                <div class="row">
+                    <div class="col-sm-8" style="text-align: center; color: white; height: 220px;">
+                        <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'">text</textarea>
+                    </div>
+                    <div class="col-sm-4" style="text-align: center; background-color: transparent;">
+                        <form action="upload_file.php" method="post" enctype="multipart/form-data">
                             <label for="file" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
                             <p style="font-family: monoton; text-align: center; margin-top: 5px;font-size: 20px; color: #77B7C1;text-shadow: 5px 5px 10px #E0E0E0">upload Sound</p>
                             </label>
@@ -53,58 +66,50 @@
                             <p style="font-family: monoton; text-align: center; margin-top: 17px;font-size: 25px; color: #796E94;text-shadow: 5px 5px 10px #E0E0E0">submit</p>
                             </label>
                             <input type="submit" id="submit" style="position: absolute; left: -9999px;">
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
-                    <p style="margin-bottom: 30px; color: white;">———————————————————————————————————————————————————</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
+                <p style="margin-bottom: 30px; color: white;">———————————————————————————————————————————————————</p>
+            </div>
+        </div>
+        <div class="row" style="color: black;">
+            <div class="col-sm-3 offset-xl-2 col-xl-2" style="text-align: center;">
+                <div class="placeFrame">
+                    <div class="exhibitionFrame"> <img src="images/sampleImg.jpg" style="width: 90%; border-radius: 10px" alt="Failure"> </div>
+                    <div class="sampleTitleFrame"> <a href="the collection.html">
+                        <h3 class="sampleTitle" style="color: aquamarine">sample</h3>
+                        </a> </div>
                 </div>
             </div>
-            <div class="row" style="color: black;">
-                <div class="col-sm-3 offset-xl-2 col-xl-2" style="text-align: center;">
-                    <div class="placeFrame">
-                        <div class="exhibitionFrame">
-                            <h1 class="PicHolder"> <img src="images/sampleImg.jpg" style="width: 90%; border-radius: 10px"> </h1>
-                        </div>
-                        <div class="sampleTitleFrame"> <a href="the collection.html">
-                            <h3 class="sampleTitle" style="color: aquamarine">sample</h3>
-                            </a> </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xl-2" style="text-align: center;">
-                    <div class="placeFrame">
-                        <div class="exhibitionFrame">
-                            <h1 class="PicHolder">PICs</h1>
-                        </div>
-                        <div class="sampleTitleFrame">
-                            <h3 class="sampleTitle">Title</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xl-2" style="text-align: center;">
-                    <div class="placeFrame">
-                        <div class="exhibitionFrame">
-                            <h1 class="PicHolder">PICs</h1>
-                        </div>
-                        <div class="sampleTitleFrame">
-                            <h3 class="sampleTitle">Title</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xl-2" style="text-align: center;">
-                    <div class="placeFrame">
-                        <div class="exhibitionFrame">
-                            <h1 class="PicHolder">PICs</h1>
-                        </div>
-                        <div class="sampleTitleFrame">
-                            <h3 class="sampleTitle">Title</h3>
-                        </div>
+            <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                <div class="placeFrame">
+                    <div class="exhibitionFrame"> <img src="#" style="width: 90%; border-radius: 10px" alt="Load Fail"> </div>
+                    <div class="sampleTitleFrame">
+                        <h3 class="sampleTitle">Title</h3>
                     </div>
                 </div>
             </div>
-        </form>
+            <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                <div class="placeFrame">
+                    <div class="exhibitionFrame"> <img src="#" style="width: 90%; border-radius: 10px" alt="Load Fail"> </div>
+                    <div class="sampleTitleFrame">
+                        <h3 class="sampleTitle">Title</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xl-2" style="text-align: center;">
+                <div class="placeFrame">
+                    <div class="exhibitionFrame"> <img src="#" style="width: 90%; border-radius: 10px" alt="Load Fail"> </div>
+                    <div class="sampleTitleFrame">
+                        <h3 class="sampleTitle">Title</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script> 
