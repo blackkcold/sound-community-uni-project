@@ -7,7 +7,24 @@
 <title>Sound Around Us</title>
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <link href="css/docration.css" rel="stylesheet">
-<style></style>
+<style>
+textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #ddd;
+}
+textarea:focus {
+    box-shadow: 0 0 20px #77B7C1;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #796E94;
+}  
+</style>
 <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
 <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
 <link href="jQueryAssets/jquery.ui.progressbar.min.css" rel="stylesheet" type="text/css">
@@ -59,7 +76,7 @@
                              &q=london"> </iframe>
                 <div class="row">
                     <div class="col-sm-8" style="text-align: center; color: white; height: 220px;">
-                        <textarea style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'">text</textarea>
+                        <textarea id="textarea" style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';" defaultValue="Please type here"></textarea>
                     </div>
                     <div class="col-sm-4" style="text-align: center; background-color: transparent;">
                         <form action="upload_file.php" method="post" enctype="multipart/form-data">
