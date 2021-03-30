@@ -73,19 +73,22 @@ textarea:focus {
                         loading="lazy"
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBQhC3j7LDPxdZe1N3cB3-AGEUF3jF2gmU
-                             &q=london"> </iframe>
+                             &q=london" style="background-color: grey"> </iframe>
                 <div class="row">
-                    <div class="col-sm-8" style="text-align: center; color: white; height: 220px;">
-                        <textarea id="textarea" style="height: 180px; width: 300px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';" defaultValue="Please type here"></textarea>
+                    <div class="col-sm-4 offset-lg-0" style="text-align: center;">
+                        <img src="#" alt="Wait for Upload" style="width: 120px;height: 180px;background-color: white;margin-top: 20px;border-radius: 10px;display: inline-block">
                     </div>
-                    <div class="col-sm-4" style="text-align: center; background-color: transparent;">
+                    <div class="col-sm-4 offset-lg-0 col-lg-5" style="text-align: center; color: white; height: 220px;">
+                        <textarea id="textarea" style="height: 180px; width: 190px; border-radius: 10px; margin-top: 20px; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';" defaultValue="Please type here"></textarea>
+                    </div>
+                    <div class="col-sm-4 col-lg-3" style="text-align: center; background-color: transparent;">
                         <form action="upload_file.php" method="post" enctype="multipart/form-data">
-                            <label for="file" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
-                            <p style="font-family: monoton; text-align: center; margin-top: 5px;font-size: 20px; color: #77B7C1;text-shadow: 5px 5px 10px #E0E0E0">upload Sound</p>
+                            <label for="file" style="background-color: white; width: 105px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
+                            <p style="font-family: monoton; text-align: center; margin-top: 8px;font-size: 19px; color: #77B7C1;text-shadow: 5px 5px 10px #E0E0E0">upload Sound</p>
                             </label>
                             <input type="file" id="file" accept="audio/*" style="position: absolute; left: -9999px;">
-                            <label for="submit" style="background-color: white; width: 150px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
-                            <p style="font-family: monoton; text-align: center; margin-top: 17px;font-size: 25px; color: #796E94;text-shadow: 5px 5px 10px #E0E0E0">submit</p>
+                            <label for="submit" style="background-color: white; width: 105px; height: 75px; margin-top: 20px; border: thin solid white; border-radius: 10px;">
+                            <p style="font-family: monoton; text-align: center; margin-top: 20px;font-size: 20px; color: #796E94;text-shadow: 5px 5px 10px #E0E0E0">submit</p>
                             </label>
                             <input type="submit" id="submit" style="position: absolute; left: -9999px;">
                         </form>
