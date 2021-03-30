@@ -8,6 +8,11 @@
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <link href="css/docration.css" rel="stylesheet">
 <style></style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.progressbar.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.progressbar.min.js"></script>
 </head>
 <body id="body">
 <div class="row">
@@ -71,6 +76,10 @@
                 </div>
             </div>
         </div>
+        <div class="row" style="margin-top: 10px">
+            <div class="col-md-12 offset-xl-2 col-xl-8">
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-12 offset-xl-2 col-xl-8" style="text-align: center;">
                 <p style="margin-bottom: 30px; color: white;">———————————————————————————————————————————————————</p>
@@ -116,6 +125,11 @@
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap-4.4.1.js"></script> 
 <script src="js/vs ARC.js"></script>
+<script type="text/javascript">
+$(function() {
+	$( "#Progressbar1" ).progressbar(); 
+});
+</script>
 </body>
 <footer style="margin-top: 30px">
     <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; margin-top: 10px; color: white;">©2021 by Sound Community Project</p>
