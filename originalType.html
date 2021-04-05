@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Around Us</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="css/docration.css" rel="stylesheet">
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARew6BheffcZi7BJdCsh7HSPmPaeLcG2c&sensor=false&language=en_GB">
+</script> 
+<script>
+function initialize()
+{
+var mapProp = {
+    center:new google.maps.LatLng(51.559852470985085, -0.28207382544936865),
+    zoom:17,
+    disableDefaultUI:true,
+    mapTypeId:google.maps.MapTypeId.SATELLITE
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style>
+</style>
+</head>
+<body id="body">
+<div id="backgroundcover">
+    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <p style="color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;margin-left: 70px;">Sound Around Us</p>
+    <a href="index.html">
+        <img src="png/left.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;left: 1%;top: 45%">
+    </a>
+    <a>
+        <img src="png/right.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;right: 1%;top: 45%">
+    </a>
+    <a href="about.html">
+    <h5 style="font-family: monoton;color: white;position: fixed;right: 0;margin: 30px">ABOUT</h5>
+    </a>
+</div>
+<!--<div id="googleMap"></div>-->
+<div id="googleMap"></div>
+<div class="row">
+    <div class="offset-lg-3 col-lg-2">
+        <h1 style="text-align: right; font-family: monoton; text-shadow: 5px 5px 10px ;position: fixed;top:27%;color: white;">ring</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 offset-xl-3 col-xl-6">
+        <canvas id="visualizer" width="570" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: fixed;top:35%;">Your browser does not support Canvas tag.</canvas>
+    </div>
+</div>
+<div class="row">
+    <div class="offset-xl-3 col-xl-6">
+        <audio id="sound" controls style="width: 570px;border-radius: 10px;position: fixed;top: 56%;">
+            <source src="source/water.mp4">
+        </audio>
+    </div>
+</div>
+<div class="row">
+    <div class="offset-xl-3 col-xl-6">
+        <p style="text-align: left;position: fixed;width: 560px;top: 65%;margin-left: 30px;color: white;text-shadow: 0 0 10px;">I found that the phone number sounds different on the iPhone.</p>
+        <a href="#">
+        <p style="text-align: right;font-size: 10px; color: white; font-style: italic;position: fixed;width: 560px;top: 75%;margin-right: 50px;text-shadow: 0 0 10px;">from Shenglun Fu, 26th March in Haidian, Beijing</p>
+        </a> </div>
+</div>
+<div class="row">
+    <div class="offset-xl-4 col-xl-4">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; color: white;position: absolute; top: 750px;left: 15%">©2021 by Sound Community Project</p>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<script src="js/vs ARC.js"></script>
+</body>
+<footer></footer>
+</html>
