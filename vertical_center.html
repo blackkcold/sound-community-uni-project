@@ -28,28 +28,50 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 <body id="body">
 <div id="backgroundcover">
-    <img id="logo" src="png/logo.png" alt="加载失败" width="30" style="background-color: transparent;">
-    <p id="logotext">Sound Around Us</p>
-    <img src="png/left.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;left: 1%;top: 45%">
-    <img src="png/right.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;right: 1%;top: 45%">
-    <div style="text-align: center; width: 600px; height: 300px;border-radius: 10px; background: white;position: fixed;left: 31%;bottom: 5%;">
-        <canvas id="visualizer" width="200" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: absolute;top: 30px;left: 30px;">Your browser does not support Canvas tag.</canvas>
-        <audio id="sound" controls style="border-radius: 10px;position: absolute;top: 215px;left: 25px">
-            <source src="source/water.mp4">
-        </audio>
-        <h3 style="text-align: right; font-family: monoton; text-shadow: 5px 5px 10px #E0E0E0; width: 300px;position: absolute;top: 25px;right: 30px">boil water</h3>
-        <p style="text-align: left;position: absolute;width: 300px;top: 80px;right: 30px">Sound recored when waiting for the hot water. It sounds quite relax as a comfort noise.The sound of steam came out in the end, which is like an ascending movement.</p>
-        <a href="#">
-        <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;bottom: 15px;right: 30px">from Haoran Yang, 15th Jan in Wembley</p> 
-        </a>
-    </div>
-    <p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; color: white;position: fixed; bottom: 0%;left: 42%">©2021 by Sound Community Project</p>
+    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <p style="color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;margin-left: 70px;">Sound Around Us</p>
+    <a href="index.html">
+        <img src="png/left.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;left: 1%;top: 45%">
+    </a>
+    <a>
+        <img src="png/right.png" alt="load fail" style="width: 60px; background-color: transparent;position: fixed;right: 1%;top: 45%">
+    </a>
     <a href="about.html">
-    <h3 style="font-family: monoton;color: white;position: fixed;right: 0;margin: 30px">ABOUT</h3>
+    <h5 style="color: white;position: fixed;right: 155px;margin: 30px">+CREATE YOURS&nbsp;&nbsp;&nbsp;&#124;</h5>
+    <!--<h5 style="color: white;position: fixed;right: 180px;margin: 30px">▨+CREATE YOURS▨&nbsp;&nbsp;&nbsp;&#124;</h5>-->
+    </a>  
+    <a href="about.html">
+    <h5 style="color: white;position: fixed;right: 80px;margin: 30px">BBS&nbsp;&nbsp;&nbsp;&#124;</h5>
+    </a>  
+    <a href="about.html">
+    <h5 style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</h5>
     </a>
 </div>
 <!--<div id="googleMap"></div>-->
 <div id="googleMap"></div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div style="text-align: center; width: 600px; height: 330px;border-radius: 10px; background: white;position: fixed;top: 30%;">
+            <canvas id="visualizer" width="540" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: absolute;top: 30px;left: 30px;">Your browser does not support Canvas tag.</canvas>
+            <p style="text-align: left;font-size: 40px;color: white;font-family: monoton; text-shadow: 5px 5px 10px #E0E0E0; width: 300px;position: absolute;top: -65px;left: 00px">boil water</p>
+            <p style="text-align: left;position: absolute;width: 550px;top: 200px;left: 30px">Sound recored when waiting for the hot water. It sounds quite relax as a comfort noise.The sound of steam came out in the end, which is like an ascending movement.</p>
+            <img src="png/Raf2512d159566bd1564881016147d6e3.png" alt="load fail" width="30" style="position: absolute;top: 285px;left: 25px">
+            <p style="position: absolute;top: 286px;left: 55px">like</p>
+            <a href="#">
+                <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;bottom: 10px;right: 30px">from Haoran Yang, 15th Jan in Wembley</p> 
+            </a>
+            <audio id="sound" controls autoplay style="border-radius: 10px;position: absolute;bottom: -75px;left: 0;width: 600px;">
+                <source src="source/water.mp4">
+            </audio>
+    </div>    
+    </div>
+</div>
+
+<div class="row">
+    <div class="offset-xl-4 col-xl-4">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; color: white;position: absolute; top: 760px;left: 20%">©2021 by Sound Community Project</p>
+    </div>
+</div>
 <script src="js/jquery-3.4.1.min.js"></script> 
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap-4.4.1.js"></script> 
