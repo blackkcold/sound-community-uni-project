@@ -46,87 +46,22 @@ google.maps.event.addDomListener(window, 'load', initialize);
         left: 30px;
     }
     #leftlogotext{
-        color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;left: 70px;filter: opacity(0.6);
+        color: white;font-size: 35px;font-family: Monoton;position: fixed;margin-top: 25px;left: 80px;filter: opacity(0.6);
     }
     #leftlogotext:hover{
         filter: opacity(1);
         transition-duration: 0.2s;
         -webkit-transition-duration: 0.2s; /* Safari */
     }
-
-.wishlist-heart-group {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 275px;
-    left: 30px;
-}
-.wishlist-heart-group input[type="checkbox"] {
-    position: absolute;
-    left: -999999px;
-    top: -999999px;
-}
-.wishlist-heart-group input[type="checkbox"] + label svg {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-.wishlist-heart-group input[type="checkbox"]:checked + label svg {
-    -webkit-animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
-    animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
-}
-.wishlist-heart-group input[type="checkbox"]:checked + label svg #heart-path {
-    -webkit-animation: wishlist-heart-add 300ms forwards;
-    animation: wishlist-heart-add 300ms forwards;
-}
-.wishlist-heart-group input[type="checkbox"] + label svg #heart-path {
-    -webkit-transition: fill 200ms;
-    transition: fill 200ms;
-}
-.wishlist-heart-group label {
-    display: inline-block;
-    width: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-}
-@-webkit-keyframes wishlist-heart-add {
-    0% {
-        stroke-width: 5;
-    }
-    50% {
-        stroke-width: 20;
-    }
-    100% {
-        stroke-width: 5;
-        fill: #f8332a;
-    }
-}
-@keyframes wishlist-heart-add {
-    0% {
-        stroke-width: 5;
-    }
-    50% {
-        stroke-width: 20;
-    }
-    100% {
-        stroke-width: 5;
-        fill: #f8332a;
-    }
-}
 </style>
 </head>
 <body id="body">
 <div id="backgroundcover">
-    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <img src="png/logo.png" alt="load fail" width="40" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
     <a href="index.html" id="leftlogotext">SOUND AROUND US</a>
     <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
         <a href="uploadpageX.html"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
-        <button type="button" class="btn btn-secondary disabled">BBS</button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#theForum">FORUM</button>
     </div>
     <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
     <a id="leftarray" href="typeXc.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
@@ -153,6 +88,27 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
+<div class="modal fade" id="theForum" tabindex="-1" role="dialog" aria-labelledby="theForumLabel" aria-hidden="true" style="position: fixed;top:10%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="theForumLabel">
+					<a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">SAU Forum</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+                <a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">
+                    <p>A Forum for sharing your comments, making friends!</p>
+                </a>
+			</div>
+			<div class="modal-footer">
+                <a href="#" style="position: absolute;left: 12px;">About the Team</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="closebtn2">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 <!--<div id="googleMap"></div>-->
 <div id="googleMap"></div>
 <div class="row">
@@ -163,6 +119,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <p style="text-align: left;position: absolute;width: 550px;top: 200px;left: 30px">Prepared for a project last term, I was walking, then running in campus as it was so cold at that time. Maybe you can get into google map to visit our campus.</p>
             <a href="#">
                 <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;bottom: 10px;right: 30px">from Bowen Yang, 19th Jan in Harrow Campus of UOW</p> 
+            </a>
+                <a href="#" data-toggle="popover" title="Location & Time of the Sound" style="width:440px;height: 30px;background-color: white;border-radius: 10px;position: absolute;bottom: 25px;right: 30px;box-shadow: 0px 0px 20px #E0E0E0;">
+                <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;top: 5px;right: 10px;">from Bowen Yang, 19th Jan in <b>University of Westminster, Harrow, London, UK</b></p> 
             </a>
             <audio id="sound" controls autoplay style="border-radius: 10px;position: absolute;bottom: -75px;left: 0;width: 600px;">
                 <source src="source/walking.mp3">
@@ -177,7 +136,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
                         </svg>
                     </label>
             </div>
-
+            <div style="position: absolute;bottom: 25px;left: 65px;font-size: 20px">
+            like
+            </div>
     </div>    
     </div>
 </div>
