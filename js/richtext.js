@@ -1,6 +1,6 @@
 (function() {
     var textarea_elem = textarea.document;
-    textarea_elem.document.getElementsByTagName("body")[0].innerHTML = "<textarea placeholder='texthere'"
+
     var boldify = function() {
         textarea_elem.execCommand('bold', false, null);
     };
