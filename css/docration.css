@@ -48,6 +48,26 @@ body {
 #introtext:hover {
     color: linear-gradient(to right, #77B7C1, #796E94);
 }
+#leftarray {
+    font-size: 80px;
+    color: white;
+    background-color: transparent;
+}
+#leftarray:hover {
+    text-shadow: 0 0 10px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+}
+#rightarray {
+    font-size: 80px;
+    color: white;
+    background-color: transparent;
+}
+#rightarray:hover {
+    text-shadow: 0 0 10px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+}
 #title {
     width: 100%;
     height: 100px;
@@ -149,4 +169,68 @@ body {
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.wishlist-heart-group {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 275px;
+    left: 30px;
+}
+.wishlist-heart-group input[type="checkbox"] {
+    position: absolute;
+    left: -999999px;
+    top: -999999px;
+}
+.wishlist-heart-group input[type="checkbox"] + label svg {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.wishlist-heart-group input[type="checkbox"]:checked + label svg {
+    -webkit-animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
+    animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
+}
+.wishlist-heart-group input[type="checkbox"]:checked + label svg #heart-path {
+    -webkit-animation: wishlist-heart-add 300ms forwards;
+    animation: wishlist-heart-add 300ms forwards;
+}
+.wishlist-heart-group input[type="checkbox"] + label svg #heart-path {
+    -webkit-transition: fill 200ms;
+    transition: fill 200ms;
+}
+.wishlist-heart-group label {
+    display: inline-block;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+@-webkit-keyframes wishlist-heart-add {
+    0% {
+        stroke-width: 5;
+    }
+    50% {
+        stroke-width: 20;
+    }
+    100% {
+        stroke-width: 5;
+        fill: #f8332a;
+    }
+}
+@keyframes wishlist-heart-add {
+    0% {
+        stroke-width: 5;
+    }
+    50% {
+        stroke-width: 20;
+    }
+    100% {
+        stroke-width: 5;
+        fill: #f8332a;
+    }
 }
