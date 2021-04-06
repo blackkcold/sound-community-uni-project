@@ -7,8 +7,6 @@ var drawVisual
 var file = document.getElementById("file");
 var audio = document.getElementById("sound");
 
-var audio = document.getElementById('music1');
-
 canvas = document.getElementById('visualizer');
 canvasCtx = canvas.getContext("2d");
 //创建数据	
