@@ -2,24 +2,19 @@
     font-family: "Monoton";
     src: url("https://github.com/blackkcold/sound-community-uni-project/blob/main/font/Monoton-Regular.ttf")
 }
-
 a:nav-link {
     color: white;
 }
-
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: #2a6496;
     text-decoration: none;
 }
-
 a:focus {
     outline: thin dotted white;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
     text-decoration: none;
 }
-
 body {
     background-color: white;
     max-width: 1350px;
@@ -28,6 +23,30 @@ body {
     margin-right: auto;
     padding-left: 50px;
     padding-right: 50px;
+}
+#teamabout {
+    color: black
+}
+#teamabout:hover {
+    color: orange;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+}
+#closebtn:hover {
+    color: red;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+}
+#closebtn2:hover {
+    color: red;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+}
+#introtext {
+    color: black;
+}
+#introtext:hover {
+    color: linear-gradient(to right, #77B7C1, #796E94);
 }
 #title {
     width: 100%;
@@ -57,10 +76,10 @@ body {
 }
 #googleMap {
     border-radius: 10px;
-    position:absolute;
+    position: absolute;
     left: 15px;
     top: 15px;
-    z-index:-2;
+    z-index: -2;
     width: 98.3%;
     height: 97%;
 }
@@ -68,10 +87,10 @@ body {
     left: 0px;
     top: 0px;
     position: absolute;
-    z-index:-1;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.00);
+    background-color: rgba(0, 0, 0, 0.00);
     text-align: center;
 }
 #mapiframe {
