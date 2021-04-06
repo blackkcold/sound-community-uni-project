@@ -63,7 +63,7 @@ function visualizer(){
 			canvasCtx.beginPath();
 			canvasCtx.globalCompositeOperation = "source-atop";
 
-			analyser.fftSize = 128;
+			analyser.fftSize = 1024;
 			var bufferlength = analyser.fftSize;
 			//傅里叶变换对数据进行处理
 			var dataArray = new Uint8Array(bufferlength);
