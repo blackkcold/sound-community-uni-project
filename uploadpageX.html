@@ -36,17 +36,29 @@ google.maps.event.addDomListener(window, 'load', initialize);
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s; /* Safari */
 }
+    #leftlogotext{
+        color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;left: 70px;filter: opacity(0.6);
+    }
+    #leftlogotext:hover{
+        filter: opacity(1);
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
 </style>
 </head>
 <body id="body">
-<div id="backgroundcover"> <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;filter: opacity(0.8)">
-    <p id="leftlogotext" style="color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;margin-left: 70px;filter: opacity(0.8)">SOUND AROUND US</p>
-    <a id="leftarray" href="index.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo; </a> <a id="rightarray" href="#" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo; </a>
+<div id="backgroundcover">
+    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <a href="index.html" id="leftlogotext">SOUND AROUND US</a>
     <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
         <a href="uploadpageX.html"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
         <button type="button" class="btn btn-secondary disabled">BBS</button>
     </div>
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
+    <a id="leftarray" href="index.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
+    </a>
+    <a id="rightarray" href="#" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo;
+    </a>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: fixed;top:20%;">
 	<div class="modal-dialog">
