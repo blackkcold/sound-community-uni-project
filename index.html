@@ -84,25 +84,6 @@ $("#btn").removeClass("active")
         transition-duration: 0.5s;
         -webkit-transition-duration: 0.5s; /* Safari */
     }
-    #teamabout{
-        color: black
-    }
-    #teamabout:hover{
-        color: orange;
-        transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s; /* Safari */
-    }
-    #closebtn:hover{
-        color: red;
-        transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s; /* Safari */
-    }
-    #introtext{
-        color: black;
-    }
-    #introtext:hover{
-        color: linear-gradient(to right, #77B7C1, #796E94);
-    }
     #mutebtn{
         color: white;
     }
@@ -112,15 +93,16 @@ $("#btn").removeClass("active")
 </style>
 </head>
 <body id="body">
-<div id="backgroundcover">
+<div class="d-md-none d-lg-block" id="backgroundcover">
     <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
     <p style="color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;margin-left: 70px;">SOUND AROUND US</p>
     <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
         <a href="uploadpageX.html"><button type="button" class="btn btn-outline-warning">+CREATE YOURS</button></a>
-        <button type="button" class="btn btn-secondary disabled">BBS</button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#theForum">FORUM</button>
     </div>
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
 </div>
+<div id="googleMap"></div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: fixed;top:20%;">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -140,10 +122,28 @@ $("#btn").removeClass("active")
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
-
+<div class="modal fade" id="theForum" tabindex="-1" role="dialog" aria-labelledby="theForumLabel" aria-hidden="true" style="position: fixed;top:10%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="theForumLabel">
+					<a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">SAU Forum</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+                <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:480px;height:352px;max-width:100%">
+                    <iframe src="https://padlet.com/padlets/gwf6rbsqe3hat9hv/embeds/preview_embed" style="width:100%;height:100%;display:block;padding:0;margin:0" frameborder="0"></iframe>
+                </div>
+			</div>
+			<div class="modal-footer">
+                <a href="#" style="position: absolute;left: 12px;">About the Team</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="closebtn2">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 <!--<div id="googleMap"></div>-->
-<div id="googleMap"></div>
-
 <div class="row">
     <div class="col-lg-12 offset-xl-3 col-xl-6">
         <canvas id="visualizer" width="570" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: fixed;top:35%;margin-left: 20px">Your browser does not support Canvas tag.</canvas>        
