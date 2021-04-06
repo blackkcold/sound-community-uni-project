@@ -1,11 +1,4 @@
 /* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Lato);
-
-* {
-    font-family: "Lato", Helvetica, sans-serif;
-    color: #888;
-    box-sizing: border-box;
-}
 #textarea {
     width: 540px;
     border-radius: 10px;
