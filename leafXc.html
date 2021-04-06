@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Around Us</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="css/docration.css" rel="stylesheet">
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARew6BheffcZi7BJdCsh7HSPmPaeLcG2c&sensor=false&language=en_GB">
+</script>
+<script>
+function initialize()
+{
+var mapProp = {
+    center:new google.maps.LatLng(51.57757131419742, -0.3260629237919626),
+    zoom:17,
+    disableDefaultUI:true,
+    mapTypeId:google.maps.MapTypeId.SATELLITE
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style>
+
+    #leftarray:hover{
+        text-shadow: 0 0 10px;
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
+    #rightarray:hover{
+        text-shadow: 0 0 10px;
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
+    #likebtn{
+        border-radius: 5px;
+        background-color: grey;
+        width: 50px;
+        height: 30px;
+        position:absolute;
+        top: 280px;
+        left: 30px;
+    }
+    #leftlogotext{
+        color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;left: 70px;filter: opacity(0.6);
+    }
+    #leftlogotext:hover{
+        filter: opacity(1);
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
+
+.wishlist-heart-group {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 275px;
+    left: 30px;
+}
+.wishlist-heart-group input[type="checkbox"] {
+    position: absolute;
+    left: -999999px;
+    top: -999999px;
+}
+.wishlist-heart-group input[type="checkbox"] + label svg {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.wishlist-heart-group input[type="checkbox"]:checked + label svg {
+    -webkit-animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
+    animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
+}
+.wishlist-heart-group input[type="checkbox"]:checked + label svg #heart-path {
+    -webkit-animation: wishlist-heart-add 300ms forwards;
+    animation: wishlist-heart-add 300ms forwards;
+}
+.wishlist-heart-group input[type="checkbox"] + label svg #heart-path {
+    -webkit-transition: fill 200ms;
+    transition: fill 200ms;
+}
+.wishlist-heart-group label {
+    display: inline-block;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+@-webkit-keyframes wishlist-heart-add {
+    0% {
+        stroke-width: 5;
+    }
+    50% {
+        stroke-width: 20;
+    }
+    100% {
+        stroke-width: 5;
+        fill: #f8332a;
+    }
+}
+@keyframes wishlist-heart-add {
+    0% {
+        stroke-width: 5;
+    }
+    50% {
+        stroke-width: 20;
+    }
+    100% {
+        stroke-width: 5;
+        fill: #f8332a;
+    }
+}
+</style>
+</head>
+<body id="body">
+<div id="backgroundcover">
+    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <a href="index.html" id="leftlogotext">SOUND AROUND US</a>
+    <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
+        <a href="#"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
+        <button type="button" class="btn btn-secondary disabled">BBS</button>
+    </div>
+    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
+    <a id="leftarray" href="trainXc.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
+    </a>
+    <a id="rightarray" href="ringX.html" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo;
+    </a>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: fixed;top:20%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">
+					<a href="#" id="introtext">Introduction</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+				A place that people sharing the environmental sound recording, bring you in a virtual space with a visualized sound-connected image and sound location. It construct a platform communicate in sound, but with more dimensions of information, which this sharing experience become simple and immersive.
+			</div>
+			<div class="modal-footer">
+                <a id="teamabout" href="#" style="position: absolute;left: 12px;">About the Team</a>
+				<button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!--<div id="googleMap"></div>-->
+<div id="googleMap"></div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div style="text-align: center; width: 600px; height: 330px;border-radius: 10px; background: white;position: fixed;top: 30%;">
+            <canvas id="visualizer" width="540" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: absolute;top: 30px;left: 30px;">Your browser does not support Canvas tag.</canvas>
+            <p style="text-align: left;font-size: 40px;color: white;font-family: monoton; text-shadow: 0px 0px 15px black; width: 300px;position: absolute;top: -65px;left: 00px">leaf</p>
+            <p style="text-align: left;position: absolute;width: 550px;top: 200px;left: 30px">This is also an sound record in my project before, which I dropped leaf. In this track, the wind noise is quite loud.</p>
+            <a href="#">
+                <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;bottom: 10px;right: 30px">from Bowen Yang, 19th Jan in Harrow Campus of UOW</p> 
+            </a>
+            <audio id="sound" controls autoplay style="border-radius: 10px;position: absolute;bottom: -75px;left: 0;width: 600px;">
+                <source src="source/leaf.mp3">
+            </audio>            
+            <div class="wishlist-heart-group">
+                <input name="product-333" id="product-333" data-product-id="333" type="checkbox" />
+                    <label for="product-333">
+                        <svg xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:cc="https://creativecommons.org/ns#" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="https://www.w3.org/2000/svg" xmlns="https://www.w3.org/2000/svg" xmlns:sodipodi="https://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="https://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                            <g transform="translate(0,-952.36218)">
+                                <path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#F8332A" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible" />
+                            </g>
+                        </svg>
+                    </label>
+            </div>
+
+    </div>    
+    </div>
+</div>
+<div class="row">
+    <div class="offset-xl-4 col-xl-3">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; color: white;position: fixed; bottom: 2%;margin-left: 50px">©2021 by Sound Community Project</p>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<script src="js/vs ARC.js"></script>
+</body>
+<footer>
+</footer>
+</html>
