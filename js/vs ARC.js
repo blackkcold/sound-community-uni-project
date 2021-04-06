@@ -95,5 +95,5 @@ function visualizer(){
         lineVS();
 	}
 draw();
-	
+audio.play();
 }
