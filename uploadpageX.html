@@ -25,6 +25,11 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<script>
+function alertResult(){
+    alert('submission are not ready, please share your sound on Forum firstly');
+}
+</script>
 <style>
 #leftarray:hover {
     text-shadow: 0 0 10px;
@@ -44,6 +49,40 @@ google.maps.event.addDomListener(window, 'load', initialize);
         transition-duration: 0.2s;
         -webkit-transition-duration: 0.2s; /* Safari */
     }
+    #uploadbtn{
+        width: 90px;
+        height: 110px;
+        position: absolute;
+        top: 70px;
+        left: 6.5px;
+        padding: 0px;
+        font-size: 70px;
+        background-color: #17A2B8;
+        border-radius: 10px;
+        color: white;
+    }
+    #submitbtn{
+        width: 90px;
+        height: 140px;
+        position: absolute;
+        top: 40px;
+        left: 6.5px;
+        padding-top: 15px;
+        font-size: 70px;
+        background-color: orange;
+        border-radius: 10px;
+        color: white;
+    }
+    #uploadbtn:hover{
+        filter: brightness(0.8);
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
+    #submitbtn:hover{
+        filter: brightness(0.8);
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+    }
 </style>
 </head>
 <body id="body">
@@ -52,13 +91,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <a href="index.html" id="leftlogotext">SOUND AROUND US</a>
     <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
         <a href="uploadpageX.html"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
-        <button type="button" class="btn btn-secondary disabled">BBS</button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#theForum">FORUM</button>
     </div>
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
-    <a id="leftarray" href="index.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
-    </a>
-    <a id="rightarray" href="#" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo;
-    </a>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: fixed;top:20%;">
 	<div class="modal-dialog">
@@ -79,14 +114,36 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
+<div class="modal fade" id="theForum" tabindex="-1" role="dialog" aria-labelledby="theForumLabel" aria-hidden="true" style="position: fixed;top:10%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="theForumLabel">
+					<a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">SAU Forum</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+                <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:480px;height:352px;max-width:100%">
+                    <iframe src="https://padlet.com/padlets/gwf6rbsqe3hat9hv/embeds/preview_embed" style="width:100%;height:100%;display:block;padding:0;margin:0" frameborder="0"></iframe>
+                </div>
+			</div>
+			<div class="modal-footer">
+                <a href="#" style="position: absolute;left: 12px;">About the Team</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="closebtn2">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 <!--<div id="googleMap"></div>-->
 <div id="googleMap"></div>
 <div class="row">
     <div class="col-md-6 offset-md-2">
-        <div style="text-align: center; width: 600px; height: 410px;border-radius: 10px; background: white;position: fixed;top: 23%;margin-left: 80px">
+        <div style="text-align: center; width: 600px; height: 410px;border-radius: 10px; background: white;position: fixed;top: 23%;margin-left: 30px;">
             <canvas id="visualizer" width="540" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: absolute;top: 30px;left: 30px;">Your browser does not support Canvas tag.</canvas>
             <audio id="sound" controls style="border-radius: 10px;position: absolute;bottom: -75px;left: 0;width: 600px;"> </audio>
-            <p style="text-align: left;font-size: 40px;color: white;font-family: monoton; text-shadow: 0px 0px 15px black;position: absolute;top: -80px;left: 0px;"><input type="text" style="width: 200px;border-radius: 10px" placeholder="title"></p>
+            <p style="text-align: left;font-size: 40px;color: white;font-family: monoton; text-shadow: 0px 0px 15px black;position: absolute;top: -80px;left: 0px;"><input type="text" style="font-family: none; width: 350px;border-radius: 10px;border: none;" placeholder="Title/8bytemax" maxlength="8"></p>
+            <p style="font-size: 20px;color: white; text-shadow: 0px 0px 15px black;position: absolute;top: -50px;right: 0px;"><input type="text" style="width: 240px;border-radius: 10px;text-align: right;border: none;" placeholder="Type location" maxlength="16"></p>
             <div id="textarea">
                 <div id="control_p" class="controls">
                     <button class="boldify">B</button>
@@ -102,12 +159,18 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </div>
                 <iframe name="textarea" class="rich_text"></iframe>
             </div>
-            <label for="file" style="background-color: white; width: 105px; height: 75px;border: thin solid white; border-radius: 10px;position: absolute;right: -130px">
-            <p style="font-family: monoton; text-align: center; margin-top: 8px;font-size: 19px; color: #77B7C1;text-shadow: 5px 5px 10px #E0E0E0">upload Sound</p>
+            <label for="file" style="background-color: white; width: 105px; height: 190px;border: thin solid white; border-radius: 10px;position: absolute;right: -130px">
+            <p style="font-family: none; text-align: center; margin-top: 8px;font-size: 20px; color: #17A2B8;text-shadow: 5px 5px 10px #E0E0E0">
+                <b>UPLOAD<br>SOUND</b>
+            </p>
+            <div id="uploadbtn">🎶</div> 
             </label>
             <input type="file" id="file" accept="audio/*" style="position: absolute; left: -9999px;">
-            <label for="submit" style="background-color: white; width: 105px; height: 75px;border: thin solid white; border-radius: 10px;position: absolute;right: -130px;top: 100px">
-            <p style="font-family: monoton; text-align: center; margin-top: 20px;font-size: 20px; color: #796E94;text-shadow: 5px 5px 10px #E0E0E0">submit</p>
+            <label for="submit" onClick="alertResult()" style="background-color: white; width: 105px; height: 190px;border: thin solid white; border-radius: 10px;position: absolute;right: -130px;top: 220px">
+            <p style="font-family: none; text-align: center; margin-top: 8px;font-size: 20px; color: orange;text-shadow: 5px 5px 10px #E0E0E0">
+                <b>SUBMIT</b>
+            </p>
+            <div id="submitbtn">💾</div> 
             </label>
             <input type="submit" id="submit" style="position: absolute; left: -9999px;">
         </div>
