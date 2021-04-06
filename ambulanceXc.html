@@ -25,17 +25,6 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <style>
-
-    #leftarray:hover{
-        text-shadow: 0 0 10px;
-        transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s; /* Safari */
-    }
-    #rightarray:hover{
-        text-shadow: 0 0 10px;
-        transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s; /* Safari */
-    }
     #likebtn{
         border-radius: 5px;
         background-color: grey;
@@ -46,92 +35,27 @@ google.maps.event.addDomListener(window, 'load', initialize);
         left: 30px;
     }
     #leftlogotext{
-        color: white;font-size: 25px;font-family: Monoton;position: fixed;margin-top: 27px;left: 70px;filter: opacity(0.6);
+        color: white;font-size: 35px;font-family: Monoton;position: fixed;margin-top: 25px;left: 80px;filter: opacity(0.6);
     }
     #leftlogotext:hover{
         filter: opacity(1);
         transition-duration: 0.2s;
         -webkit-transition-duration: 0.2s; /* Safari */
     }
-
-.wishlist-heart-group {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 275px;
-    left: 30px;
-}
-.wishlist-heart-group input[type="checkbox"] {
-    position: absolute;
-    left: -999999px;
-    top: -999999px;
-}
-.wishlist-heart-group input[type="checkbox"] + label svg {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-.wishlist-heart-group input[type="checkbox"]:checked + label svg {
-    -webkit-animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
-    animation: wishlist-heart-wiggle 400ms 50ms forwards ease-in-out;
-}
-.wishlist-heart-group input[type="checkbox"]:checked + label svg #heart-path {
-    -webkit-animation: wishlist-heart-add 300ms forwards;
-    animation: wishlist-heart-add 300ms forwards;
-}
-.wishlist-heart-group input[type="checkbox"] + label svg #heart-path {
-    -webkit-transition: fill 200ms;
-    transition: fill 200ms;
-}
-.wishlist-heart-group label {
-    display: inline-block;
-    width: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-}
-@-webkit-keyframes wishlist-heart-add {
-    0% {
-        stroke-width: 5;
-    }
-    50% {
-        stroke-width: 20;
-    }
-    100% {
-        stroke-width: 5;
-        fill: #f8332a;
-    }
-}
-@keyframes wishlist-heart-add {
-    0% {
-        stroke-width: 5;
-    }
-    50% {
-        stroke-width: 20;
-    }
-    100% {
-        stroke-width: 5;
-        fill: #f8332a;
-    }
-}
 </style>
 </head>
 <body id="body">
 <div id="backgroundcover">
-    <img src="png/logo.png" alt="load fail" width="30" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <img src="png/logo.png" alt="load fail" width="40" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
     <a href="index.html" id="leftlogotext">SOUND AROUND US</a>
     <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
         <a href="uploadpageX.html"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#theForum">FORUM</button>
     </div>
     <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
-    <a id="leftarray" href="washingXc.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
+    <a id="leftarray" href="ambulanceXc.html" style="font-size: 80px;color: white; background-color: transparent;position: fixed;left: 2%;top: 43%">&laquo;
     </a>
-    <a id="rightarray" href="boilwaterXc.html" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo;
+    <a id="rightarray" href="trainXc.html" style="font-size: 80px;color: white;background-color: transparent;position: fixed;right: 2%;top: 43%">&raquo;
     </a>
 </div>
 <div id="googleMap"></div>
@@ -144,7 +68,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				</h4>
 			</div>
 			<div class="modal-body">
-				A place that people sharing the environmental sound recording, bring you in a virtual space with a visualized sound-connected image and sound location. It construct a platform communicate in sound, but with more dimensions of information, which this sharing experience become simple and immersive.
+                A place for you to share the environmental sound recording, brings a virtual space with a visualized sound-connected image and location. It constructs a platform that helps users to communicate by sound and provides diverse dimensions of information of sound, which makes share experience much more simple and immersive.
 			</div>
 			<div class="modal-footer">
                 <a id="teamabout" href="#" style="position: absolute;left: 12px;">About the Team</a>
@@ -163,9 +87,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				</h4>
 			</div>
 			<div class="modal-body">
-                <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:480px;height:352px;max-width:100%">
-                    <iframe src="https://padlet.com/padlets/gwf6rbsqe3hat9hv/embeds/preview_embed" style="width:100%;height:100%;display:block;padding:0;margin:0" frameborder="0"></iframe>
-                </div>
+                <a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">
+                    <p>A Forum for sharing your comments, making friends!</p>
+                </a>
 			</div>
 			<div class="modal-footer">
                 <a href="#" style="position: absolute;left: 12px;">About the Team</a>
@@ -182,8 +106,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <canvas id="visualizer" width="540" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: absolute;top: 30px;left: 30px;">Your browser does not support Canvas tag.</canvas>
             <p style="text-align: left;font-size: 40px;color: white;font-family: monoton; text-shadow: 0px 0px 15px black; width: 300px;position: absolute;top: -65px;left: 00px">ambulance</p>
             <p style="text-align: left;position: absolute;width: 550px;top: 200px;left: 30px">This is the ambulance siren sound. Last year, a global disease broke out. We often hear this voice, and hope that it will disappear in the future.</p>
-            <a href="#">
-                <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;bottom: 10px;right: 30px">from Shenglun Fu, 27th March in Dongdan, Beijing</p> 
+            <a href="#" data-toggle="popover" title="Location & Time of the Sound" style="width:330px;height: 30px;background-color: white;border-radius: 10px;position: absolute;bottom: 25px;right: 30px;box-shadow: 0px 0px 20px #E0E0E0;">
+                <p style="text-align: right;font-size: 10px; color: black; font-style: italic;position: absolute;top: 5px;right: 10px;">from Shenglun Fu, 27th March in <b>Dongdan, Beijing, China</b></p> 
             </a>
             <audio id="sound" controls style="border-radius: 10px;position: absolute;bottom: -75px;left: 0;width: 600px;">
                 <source src="source/ambulance.mp4">
@@ -197,6 +121,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
                             </g>
                         </svg>
                     </label>
+            </div>
+            <div style="position: absolute;bottom: 25px;left: 65px;font-size: 20px">
+            like
             </div>
 
     </div>    
