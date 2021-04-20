@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Around Us</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="css/docration.css" rel="stylesheet">
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARew6BheffcZi7BJdCsh7HSPmPaeLcG2c&sensor=false&language=en_GB">
+</script> 
+<script>
+function initialize()
+{
+
+var mapProp = {
+    center:new google.maps.LatLng(39.92593277818749, 116.3824665129622),
+    zoom:17,
+    disableDefaultUI:true,
+    mapTypeId:google.maps.MapTypeId.SATELLITE
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);    
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style>
+    #exploreBt:hover{
+        text-shadow: 0 0 10px;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s; /* Safari */
+    }
+</style>
+</head>
+<body id="body">
+<div class="d-md-none d-lg-block" id="backgroundcover">
+    <img src="png/logo.png" alt="load fail" width="40" style="background-color: transparent;position: fixed;left: 0;margin: 30px;">
+    <p style="color: white;font-size: 35px;font-family: Monoton;position: fixed;margin-top: 25px;margin-left: 80px;">SOUND AROUND US</p>
+    <div class="btn-group" role="group" style="color: white;position: fixed;right: 90px;margin: 30px">
+        <a href="uploadpageX.html"><button type="button" class="btn btn-warning">+CREATE YOURS</button></a>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#theForum">FORUM</button>
+    </div>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="color: white;position: fixed;right: 0;margin: 30px">ABOUT</button>
+</div>
+<div id="googleMap"></div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: fixed;top:20%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">
+					<a href="index.html" id="introtext">Introduction</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+                A place for you to share the environmental sound recording, brings a virtual space with a visualized sound-connected image and location. It constructs a platform that helps users to communicate by sound and provides diverse dimensions of information of sound, which makes share experience much more simple and immersive.
+			</div>
+			<div class="modal-footer">
+                <a id="teamabout" href="teamintro.html" style="position: absolute;left: 12px;">About the Team</a>
+				<button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<div class="modal fade" id="theForum" tabindex="-1" role="dialog" aria-labelledby="theForumLabel" aria-hidden="true" style="position: fixed;top:10%;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="theForumLabel">
+					<a href="https://padlet.com/w1738336/gwf6rbsqe3hat9hv">SAU Forum</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+                <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:480px;height:352px;max-width:100%">
+                    <iframe src="https://padlet.com/padlets/gwf6rbsqe3hat9hv/embeds/preview_embed" style="width:100%;height:100%;display:block;padding:0;margin:0" frameborder="0"></iframe>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="closebtn2">※CLOSE※
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!--<div id="googleMap"></div>-->
+<div class="row">
+    <div class="col-lg-12 offset-xl-3 col-xl-6">
+        <canvas id="visualizer" width="570" height="150" style="border-radius: 10px; box-shadow: 0px 0px 20px #E0E0E0;position: fixed;top:35%;margin-left: 20px">Your browser does not support Canvas tag.</canvas>        
+        <audio id="sound" autoplay loop controls style="width: 120px;border-radius: 10px;position: fixed;bottom: 5%;right: 2%;">
+            <source src="source/water.mp4">
+        </audio>
+    </div>
+</div> 
+<div class="row">
+    <div class="offset-xl-3 col-xl-4">
+        <a href="ambulanceXc.html" id="exploreBt" style="text-align: left;font-size: 80px; color: white;position: fixed;top: 55%;margin-left: 110px;">&gt;Explore&lt;
+        </a> 
+    </div>
+</div>
+<div class="row">
+    <div class="offset-xl-4 col-xl-3">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; color: white;position: fixed; bottom: 2%;margin-left: 50px">©2021 by Sound Community Project</p>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script>
+<script src="js/vs ARC.js"></script>
+</body>
+<footer></footer>
+</html>
