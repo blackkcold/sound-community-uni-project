@@ -66,7 +66,7 @@ function visualizer(){
 			var bufferlength = analyser.fftSize;
 			//傅里叶变换对数据进行处理
 			var dataArray = new Uint8Array(bufferlength);
-
+            //这里进行了重新采样，for循环中实际是在调整采样数量，调整canvas绘制密度与锚点位置
 			drawVisual = requestAnimationFrame(draw);
 			//持续刷新
 			analyser.getByteTimeDomainData(dataArray);
